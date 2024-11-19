@@ -8,7 +8,6 @@ body {
     font-family: Arial, sans-serif;
 }
 
-
 header {
     display: flex;
     justify-content: space-between;
@@ -16,6 +15,7 @@ header {
     padding: 10px 20px;
     background-color: #f9f9f9;
     border-bottom: 1px solid #ddd;
+    position: relative;
 }
 
 header .logo img {
@@ -75,11 +75,11 @@ header .buttons button.signup:hover {
 .banner-rotativo {
     position: relative;
     overflow: hidden;
-    height: 300px; 
+    height: 300px;
 }
 
 .banner-rotativo .banner-slide {
-    display: none; 
+    display: none;
     width: 100%;
     height: 100%;
     color: #fff;
@@ -91,10 +91,8 @@ header .buttons button.signup:hover {
 }
 
 .banner-rotativo .banner-slide.active {
-    display: flex; 
+    display: flex;
 }
-
-
 
 .ranking {
     text-align: center;
@@ -189,4 +187,127 @@ footer a {
 
 footer a:hover {
     text-decoration: underline;
+}
+
+/* Media Queries para Responsividade */
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px;
+    }
+
+    header .menu {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+        width: 100%;
+        padding: 10px;
+        background-color: #f9f9f9;
+    }
+
+    header .menu.active {
+        display: flex;
+    }
+
+    header .buttons {
+        width: 100%;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+
+    header .buttons button {
+        width: 100%;
+        font-size: 13px;
+        margin-bottom: 10px;
+    }
+
+    .banner-rotativo {
+        height: 250px;
+    }
+
+    .ranking .ranking-list {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .ranking-item img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .ranking-item p {
+        font-size: 14px;
+    }
+
+    .carousel {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    video {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    header .logo img {
+        max-height: 30px;
+    }
+
+    header .menu a {
+        font-size: 14px;
+    }
+
+    .ranking h2 {
+        font-size: 20px;
+    }
+
+    .ranking-item img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .ranking-item p {
+        font-size: 12px;
+    }
+
+    .carousel-item {
+        width: 100%;
+    }
+
+    video {
+        width: 100%;
+        height: auto;
+    }
+
+    header .buttons button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+/* Estilo do Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 30px;
+    height: 4px;
+    background-color: #333;
+    border-radius: 5px;
+}
+
+/* Exibe o Hamburger Menu em telas pequenas */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
 }
