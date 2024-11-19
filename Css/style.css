@@ -1,0 +1,192 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #ddd;
+}
+
+header .logo img {
+    max-height: 40px;
+}
+
+header .menu {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+header .menu a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+header .buttons {
+    display: flex;
+    gap: 10px;
+}
+
+header .buttons button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+header .buttons button.login {
+    background-color: transparent;
+    border: 1px solid #007BFF;
+    color: #007BFF;
+}
+
+header .buttons button.login:hover {
+    background-color: #007BFF;
+    color: #fff;
+}
+
+header .buttons button.signup {
+    background-color: #007BFF;
+    color: white;
+}
+
+header .buttons button.signup:hover {
+    background-color: #0056b3;
+}
+
+/* Banner Rotativo */
+.banner-rotativo {
+    position: relative;
+    overflow: hidden;
+    height: 300px; 
+}
+
+.banner-rotativo .banner-slide {
+    display: none; 
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.banner-rotativo .banner-slide.active {
+    display: flex; 
+}
+
+
+
+.ranking {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.ranking h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.ranking-list {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.ranking-item {
+    text-align: center;
+}
+
+.ranking-item img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.ranking-item p {
+    font-size: 16px;
+}
+
+/* Estrelas para o ranking */
+.stars {
+    font-size: 24px;
+    color: #FFD700; /* Cor dourada */
+}
+
+.stars[data-rank="1"]::before {
+    content: "⭐⭐⭐⭐⭐";
+}
+
+.stars[data-rank="2"]::before {
+    content: "⭐⭐⭐⭐";
+}
+
+.stars[data-rank="3"]::before {
+    content: "⭐⭐⭐";
+}
+
+/* Carrossel de Vídeos */
+.video-carousel {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.video-carousel h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.carousel {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    overflow-x: auto;
+}
+
+.carousel-item {
+    flex: 0 0 auto;
+}
+
+video {
+    width: 300px;
+    height: 200px;
+    border-radius: 8px;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
